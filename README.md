@@ -1,4 +1,5 @@
 # Shifty Pills
+![screenshot](screenshot.png "Gameplay example")
 
 About
 -----
