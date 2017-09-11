@@ -10,8 +10,8 @@ Line up 3 or more pills of a matching color in order to clear them.
 
 Authors
 -------
-* Programming, fonts & game idea - [Artur Rojek (zear)](contact@artur-rojek.eu)
-* Graphics - [vergeofapathy](stephan@vergeofapathy.com)
+* Programming, fonts & game idea - [Artur Rojek (zear)](mailto:contact@artur-rojek.eu)
+* Graphics - [vergeofapathy](mailto:stephan@vergeofapathy.com)
 
 License
 -------
