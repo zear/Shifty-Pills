@@ -5,6 +5,14 @@ ifeq ($(PLATFORM), gcw0)
   CFLAGS     := --std=c89 --pedantic -Wall $(shell $(SYSROOT)/usr/bin/sdl-config --cflags) -DHOME_DIR -DNETWORKING
   LDFLAGS    := $(shell $(SYSROOT)/usr/bin/sdl-config --libs) -lm
 endif
+ifeq ($(PLATFORM), bittboy)
+	CC		:= arm-linux-gcc
+	STRIP		:= arm-linux-strip
+	SYSROOT		:= $(shell $(CC) --print-sysroot)
+	CFLAGS		:= $(shell $(SYSROOT)/usr/bin/sdl-config --cflags)
+	CFLAGS		+= -DHOME_DIR -D_BITTBOY
+	LDFLAGS		:= $(shell $(SYSROOT)/usr/bin/sdl-config --libs) -lSDL_mixer -lm
+endif
 ifeq ($(PLATFORM), macos)
   CFLAGS     := $(shell sdl-config --cflags)
 endif

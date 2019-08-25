@@ -35,6 +35,17 @@ void defaultKeymap(int **keyMap, int playerNum)
 	switch (playerNum)
 	{
 		case 1:
+#ifdef _BITTBOY
+			keyMap[KEY_UP] =			&keys[SDLK_UP];
+			keyMap[KEY_DOWN] =			&keys[SDLK_DOWN];
+			keyMap[KEY_LEFT] =			&keys[SDLK_LEFT];
+			keyMap[KEY_RIGHT] =			&keys[SDLK_RIGHT];
+			keyMap[KEY_ROTATE_LEFT] =	&keys[SDLK_SPACE];
+			keyMap[KEY_ROTATE_RIGHT] =	&keys[SDLK_LCTRL];
+			keyMap[KEY_DROP] =			&keys[SDLK_LALT];
+			keyMap[KEY_OK] =			&keys[SDLK_RETURN];
+			keyMap[KEY_BACK] =			&keys[SDLK_ESCAPE];
+#else
 			keyMap[KEY_UP] =			&keys[SDLK_UP];
 			keyMap[KEY_DOWN] =			&keys[SDLK_DOWN];
 			keyMap[KEY_LEFT] =			&keys[SDLK_LEFT];
@@ -44,6 +55,7 @@ void defaultKeymap(int **keyMap, int playerNum)
 			keyMap[KEY_DROP] =			&keys[SDLK_SPACE];
 			keyMap[KEY_OK] =			&keys[SDLK_LCTRL];
 			keyMap[KEY_BACK] =			&keys[SDLK_ESCAPE];
+#endif
 		break;
 		case 2:
 			keyMap[KEY_UP] =			&keys[SDLK_i];

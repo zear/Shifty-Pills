@@ -50,7 +50,7 @@ void networkCloseConnection()
 {
 }
 
-void networkSendPacket(uint8_t type)
+void networkSendPacket(NetPacketType type)
 {
 }
 

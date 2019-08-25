@@ -4,7 +4,11 @@
 
 SDL_Surface *screen;
 SDL_Surface *screenScaled;
+#ifdef _BITTBOY
+int screenScale = 1;
+#else
 int screenScale = 2;
+#endif
 int fullscreen;
 int showFps;
 unsigned int fps;
